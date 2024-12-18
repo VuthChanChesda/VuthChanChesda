@@ -25,7 +25,8 @@ I'm a new web developer passionate about building web applications. I specialize
 
 ## GitHub Stats
 
-![VuthChanChesda's GitHub stats](https://github-readme-stats.vercel.app/api?username=VuthChanChesda&show_icons=true&theme=radical)
+![VuthChanChesda's GitHub stats](https://github-readme-stats.vercel.app/api?username=VuthChanChesda&show_icons=true&theme=radical&cache_seconds=1800
+)
 
 ## Top Languages
 
