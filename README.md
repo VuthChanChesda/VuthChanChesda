@@ -30,7 +30,7 @@ I'm a new web developer passionate about building web applications. I specialize
 
 ## Top Languages
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=VuthChanChesda&layout=compact&theme=radical)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=VuthChanChesda&layout=compact&theme=radical&token=YOUR_PERSONAL_ACCESS_TOKEN)
 
 
 
