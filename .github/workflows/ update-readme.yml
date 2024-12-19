@@ -29,6 +29,4 @@ jobs:
           git add README.md
           git diff README.md  # Show the diff to verify changes
           git commit -m "Update Top Languages in README.md"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Ensure you have added the GH_TOKEN secret
+          git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/VuthChanChesda/VuthChanChesda.git
