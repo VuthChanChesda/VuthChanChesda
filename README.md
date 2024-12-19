@@ -25,23 +25,8 @@ I'm a new web developer passionate about building web applications. I specialize
 
 ## GitHub Stats
 
-![VuthChanChesda's GitHub stats](https://github-readme-stats.vercel.app/api?username=VuthChanChesda&show_icons=true&theme=radical&cache_seconds=1800
-)
+![VuthChanChesda's GitHub stats](https://github-readme-stats.vercel.app/api?username=vuthchanchesda&show_icons=true&theme=radical&cache_seconds=1800)
 
 ## Top Languages
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=VuthChanChesda&layout=compact&theme=radical&token=YOUR_PERSONAL_ACCESS_TOKEN)
-
-
-
-
-
-
-
-
-
-
-<!---
-VuthChanChesda/VuthChanChesda is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+![Top Languages](https://your-vercel-app-url.vercel.app/api/stats)  <!-- Dynamic link to the serverless function -->
