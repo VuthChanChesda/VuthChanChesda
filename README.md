@@ -29,4 +29,5 @@ I'm a new web developer passionate about building web applications. I specialize
 
 ## Top Languages
 
-![Top Languages](https://your-vercel-app-url.vercel.app/api/stats)  <!-- Dynamic link to the serverless function -->
+## Top Languages
+![Top Languages](old-image-url)
