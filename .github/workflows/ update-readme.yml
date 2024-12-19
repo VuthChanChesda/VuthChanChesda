@@ -7,36 +7,28 @@ on:
 
 jobs:
   update-readme:
-    runs-on: macos-latest  # Use macOS runner instead of Ubuntu
+    runs-on: macos-latest  # Use macOS runner for compatibility
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Fetch Top Languages image and update README.md
         run: |
-          set -e  # Stop if any command fails
+          set -e
           echo "Fetching top languages..."
           curl -s "https://github-readme-stats.vercel.app/api/top-langs/?username=VuthChanChesda&layout=compact&theme=radical&token=${{ secrets.GH_TOKEN }}" > top-langs-image.svg
-          
-          # Debugging: Output fetched image content to the log
-          cat top-langs-image.svg
-
-          # Update README.md with the new image
-          sed -i '' '/Top Languages/ {n;s|![^ ]*|![Top Languages](top-langs-image.svg)|}' README.md
-
-          # Debugging: Ensure the update happened
-          echo "README updated with top languages image."
+          cat top-langs-image.svg  # Debugging step to view image data
+          # Replacing old image URL with new one in README.md
+          awk '/Top Languages/ { print; print "!["Top Languages"](top-langs-image.svg)"; next }1' README.md > tmpfile && mv tmpfile README.md
+          echo "README updated"
 
       - name: Commit and push changes to README.md
         run: |
           git config --local user.name "github-actions"
           git config --local user.email "github-actions@github.com"
           git add README.md
-          
-          # Log any differences before committing
-          git diff README.md
-
+          git diff README.md  # Show the diff to verify changes
           git commit -m "Update Top Languages in README.md"
           git push
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use GitHub's default token
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Ensure you have added the GH_TOKEN secret
