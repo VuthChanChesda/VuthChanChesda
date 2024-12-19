@@ -7,23 +7,15 @@ on:
 
 jobs:
   update-readme:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest  # Use macOS runner instead of Ubuntu
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-
-      - name: Install dependencies
-        run: npm install
-
       - name: Fetch Top Languages image and update README.md
         run: |
           curl -s "https://github-readme-stats.vercel.app/api/top-langs/?username=VuthChanChesda&layout=compact&theme=radical&token=${{ secrets.GH_TOKEN }}" > top-langs-image.svg
-          sed -i '/Top Languages/ {n;s|![^ ]*|![Top Languages](top-langs-image.svg)|}' README.md
+          sed -i '' '/Top Languages/ {n;s|![^ ]*|![Top Languages](top-langs-image.svg)|}' README.md
 
       - name: Commit and push changes to README.md
         run: |
@@ -32,3 +24,4 @@ jobs:
           git add README.md
           git commit -m "Update Top Languages in README.md"
           git push
+
