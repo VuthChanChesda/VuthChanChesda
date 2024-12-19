@@ -1,4 +1,4 @@
-name: Update README with GitHub Top Languages
+name: Update README
 
 on:
   schedule:
@@ -16,7 +16,7 @@ jobs:
         run: |
           set -e
           echo "Fetching top languages..."
-          curl -s "https://github-readme-stats.vercel.app/api/top-langs/?username=VuthChanChesda&layout=compact&theme=radical&token=${{ secrets.GH_TOKEN }}" > top-langs-image.svg
+          curl -s "https://github-readme-stats.vercel.app/api/top-langs/?username=VuthChanChesda&layout=compact&theme=radical&token=${{ secrets.TOKEN }}" > top-langs-image.svg
           cat top-langs-image.svg  # Debugging step to view image data
           # Replacing old image URL with new one in README.md
           awk '/Top Languages/ { print; print "!["Top Languages"](top-langs-image.svg)"; next }1' README.md > tmpfile && mv tmpfile README.md
@@ -29,4 +29,4 @@ jobs:
           git add README.md
           git diff README.md  # Show the diff to verify changes
           git commit -m "Update Top Languages in README.md"
-          git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/VuthChanChesda/VuthChanChesda.git
+          git push https://x-access-token:${{ secrets.TOKEN }}@github.com/VuthChanChesda/VuthChanChesda.git
