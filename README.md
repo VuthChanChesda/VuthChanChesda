@@ -19,9 +19,8 @@ I'm a new web developer passionate about building web applications. I specialize
 
 ## Contact
 
-- 📫 How to reach me: [Your Email]
+- 📫 How to reach me: (mailto:vuthchanchesda26@gmail.com )
 - 💼 [LinkedIn](https://www.linkedin.com/in/yourprofile)
-- 🌐 [Personal Website](https://yourwebsite.com)
 
 ## GitHub Stats
 
