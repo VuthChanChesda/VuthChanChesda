@@ -20,7 +20,6 @@ I'm a new web developer passionate about building web applications. I specialize
 ## Contact
 
 - 📫 How to reach me: <vuthchanchesda26@gmail.com>
-- 💼 [LinkedIn](https://www.linkedin.com/in/yourprofile)
 
 ## GitHub Stats
 
